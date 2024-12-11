@@ -1,0 +1,35 @@
+<form id="converterForm">
+    <input type="number" id="valor" placeholder="Valor" required>
+    <select id="moedaBase">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <!-- Outras opções -->
+    </select>
+    <select id="moedaAlvo">
+        <option value="BRL">BRL</option>
+        <option value="EUR">EUR</option>
+        <!-- Outras opções -->
+    </select>
+    <button type="submit">Converter</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+document.getElementById("converterForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const valor = document.getElementById("valor").value;
+    const moedaBase = document.getElementById("moedaBase").value;
+    const moedaAlvo = document.getElementById("moedaAlvo").value;
+
+    const taxa = await obterTaxaDeCambio(moedaBase, moedaAlvo);
+    const resultado = valor * taxa;
+    document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+});
+
+async function obterTaxaDeCambio(base, target) {
+    const resposta = await fetch(`https://api.exchangerate-api.com/v4/latest/${base}`);
+    const dados = await resposta.json();
+    return dados.rates[target];
+}
+</script>
