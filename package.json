@@ -1,12 +1,16 @@
 {
-  "name": "my-app",
+  "name": "meu-app",
   "version": "1.0.0",
-  "description": "My awesome app",
-  "main": "package.json",
+  "description": "Minha aplicação Node.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
