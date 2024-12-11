@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "1.0.0",
   "description": "My awesome app",
-  "main": "index.js",
+  "main": "package.json",
   "scripts": {
     "start": "node app.js"
   },
