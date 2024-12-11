@@ -1,5 +1,15 @@
 import requests
-from config import API_KEY
+import os
+
+# Buscando a API_KEY da variável de ambiente
+API_KEY = os.getenv("API_KEY")
+
+class CurrencyConverter:
+    def __init__(self):
+        pass
+
+    def convert(self, amount, from_currency, to_currency):
+        pass
 
 class CurrencyConverter:
     API_URL = "https://v6.exchangerate-api.com/v6/{api_key}/latest/{currency}"
