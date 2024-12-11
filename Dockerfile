@@ -18,3 +18,7 @@ EXPOSE 3000
 
 # comando para rodar a aplicação (modifique conforme seu arquivo principal)
 CMD ["npm", "start"]
+const port = process.env.PORT || 3000; // Porta fornecida pelo Railway ou 3000 local
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
