@@ -109,3 +109,6 @@ input, select {
     font-weight: bold;
     color: #4CAF50;
 }
+<section id="feedback" class="feedback hidden">
+    <p class="feedback-message"></p>
+</section>
