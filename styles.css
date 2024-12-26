@@ -81,3 +81,18 @@ input, select {
         font-size: 0.9rem;
     }
 }
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 10px;
+    color: #666;
+}
+
+.input-with-icon select {
+    padding-left: 2rem; /* Add space for the icon */
+}
