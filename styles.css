@@ -96,3 +96,16 @@ input, select {
 .input-with-icon select {
     padding-left: 2rem; /* Add space for the icon */
 }
+.result {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.converted-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
