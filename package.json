@@ -15,20 +15,3 @@
   "author": "",
   "license": "ISC"
 }
-
-function showFeedback(message, type) {
-    const feedback = document.getElementById('feedback');
-    const feedbackMessage = document.querySelector('.feedback-message');
-    feedbackMessage.textContent = message;
-    feedback.className = `feedback ${type}`;
-}
-
-function hideFeedback() {
-    const feedback = document.getElementById('feedback');
-    feedback.className = 'feedback hidden';
-}
-
-// Exemplo de uso:
-// showFeedback('Converting currency...', 'loading');
-// showFeedback('Error: Unable to fetch data.', 'error');
-// hideFeedback();
