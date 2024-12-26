@@ -16,7 +16,7 @@
   "license": "ISC"
 }
 
-Ótimo! Podemos melhorar ainda mais o layout adicionando elementos visuais e funcionalidades interativas. Aqui estão algumas ideias para testarmos:
+
 
 1. Adicionar Ícones para Moedas
 Usar ícones para identificar visualmente as moedas. Adicione a biblioteca de ícones Font Awesome ao projeto.
@@ -114,45 +114,6 @@ Copiar código
         font-size: 0.9rem;
     }
 }
-4. Adicionar Feedback Interativo
-Mostre mensagens de carregamento ou erro diretamente na página.
-
-HTML:
-html
-Copiar código
-<section id="feedback" class="feedback hidden">
-    <p class="feedback-message"></p>
-</section>
-CSS:
-css
-Copiar código
-.hidden {
-    display: none;
-}
-
-.feedback {
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.feedback-message {
-    font-size: 1rem;
-}
-
-.feedback.loading {
-    background: #fffbe0;
-    color: #c99a00;
-}
-
-.feedback.error {
-    background: #ffe0e0;
-    color: #c90000;
-}
-JS (para interatividade):
-javascript
-Copiar código
 function showFeedback(message, type) {
     const feedback = document.getElementById('feedback');
     const feedbackMessage = document.querySelector('.feedback-message');
